@@ -6,7 +6,586 @@
         <link rel="stylesheet" href="figma.css">
         <title>Document</title>
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    
+          <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+} 
+nav {
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 3rem;
+  background-color: #fff;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #054A68 0%, #52829C 100%);
+  border-radius: 5px;
+  left: 0;
+  bottom: -6px;
+  transform: scaleX(0);
+  transition: transform .5s;
+  transform-origin: right;
+}
+
+.nav-links li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.logo .text {
+  display: flex;
+  align-items: center;
+}
+
+.logo .text div.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo .text h2 {
+  font-size: 47px;
+  color: #225677;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.log {
+  width: 138px;
+  height: 130px;
+  position: relative;
+  top: -8.43px;
+  mix-blend-mode: darken;
+}
+
+.after {
+  color: #8CACBA;
+  font-size: 16px;
+  line-height: 18.57px;
+  letter-spacing: -0.15px;
+  font-weight: 400;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-right: 20px;
+  position: relative;
+  right: 30px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: #225677;
+  font-weight: 700;
+
+}
+  .fd{
+    border: 1px solid white;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #054A68 0%, #52829C 100%);
+    margin-left: 20px;
+  }
+
+      /* Media query for responsiveness */
+      @media (max-width: 768px) {
+          nav {
+              padding: 15px 30px;
+              flex-direction: column;
+              text-align: center;
+          }
+
+          .nav-links {
+              margin: 20px 0 0 0;
+          }
+
+          ul {
+              flex-direction: column;
+              align-items: center;
+          }
+
+          ul li {
+              margin-right: 0;
+              margin-bottom: 10px;
+          }
+
+          .button {
+              margin-left: 0;
+              margin-top: 15px;
+          }
+      }
+.sec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px;
+}
+
+.cs {
+    flex: 1 1 50%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cs h1 {
+    font-size: 32px;
+    color: #054A68;
+    margin-top: 50px;
+}
+
+.cs p {
+    line-height: 1.6;
+    color: #718EA1;
+    margin-top: 20px;
+}
+
+.ig {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.ig img.def {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.zx {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0px;
+    background: linear-gradient(to bottom, #054A68 0%, #52829C 100%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ss {
+    flex: 1 1 300px;
+    background: linear-gradient(to bottom, #054A68 0%, #52829C 100%);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.vg{
+  flex: 1 1 300px;
+  background: linear-gradient(to bottom, #054A68 0%, #52829C 100%);
+  padding: 40px;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  cursor: pointer;
+}
+
+.cd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cd .span {
+    border: 10px solid #054A68;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #054A68;
+}
+
+.vc {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.sx {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cq {
+    margin-top: 20px;
+}
+
+.span11 {
+    display: inline-block;
+    background-color: #042a3a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.qa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.zs {
+    flex: 1 1 300px;
+    background: linear-gradient(to bottom, #054A68 0%, #52829C 100%);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nb {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.xv {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.qv {
+    margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .nav {
+        padding: 20px 30px;
+    }
+    .cs, .ig {
+        flex: 1 1 100%;
+    }
+    .zx .ss {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav {
+        padding: 20px 20px;
+    }
+    .logo .text img.log {
+        margin-left: 10px;
+    }
+    .button {
+        margin-left: 10px;
+        font-size: 10px;
+    }
+    .zx .ss {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        margin-top: 20px;
+    }
+    .logo .text {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo .text img.log {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .cs h1 {
+        font-size: 28px;
+    }
+    .button {
+        margin-left: 0;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    .zx .ss {
+        flex: 1 1 100%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .zx .ss {
+        flex: 1 1 100%;
+    }
+    .sec {
+        margin: 30px;
+    }
+    .cs h1 {
+        font-size: 24px;
+    }
+    .ig img.def {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .zx .ss {
+        padding: 20px;
+    }
+    .cs h1 {
+        font-size: 22px;
+    }
+    .as{
+        margin-left: 500px;
+        
+    }
+}
+@media only screen and (max-width: 600px) {
+
+}
+
+@media (max-width: 360px) {
+    .nav {
+        padding: 20px 10px;
+    }
+    .cs h1 {
+        font-size: 20px;
+    }
+    .as{
+        margin-left: 500px;
+        
+    }
+}
+/* Default styles for larger screens */
+.footer {
+  background: linear-gradient(to right, #043f59 100%, #4f86a4 0%);
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.footer div {
+  max-width: 300px;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer p, .footer li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .contact, .footer .location, .footer .pages, .footer .features, .footer .follows {
+  flex: none;
+}
+
+.footer .contact p, .footer .location p {
+  margin: 0 0 10px 0;
+}
+
+.footer .pages ul, .footer .features ul, .footer .follows ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .pages li, .footer .features li, .footer .follows li {
+  margin-bottom: 10px;
+}
+
+.footer .pages a, .footer .features a, .footer .follows a {
+  display: block;
+  color: #fff;
+}
+
+.footer .follows a i {
+  margin-right: 8px;
+}
+/* Additional styles for the copyright notice */
+.copyright {
+  text-align: center;
+  padding: 18px 0;
+  background: linear-gradient(to right, #043f59 100%, #4f86a4 0%);
+  color: #8CACBA;
+}
+
+/* Additional styles for specific elements in the footer */
+.footer .contact h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer .contact p {
+  font-size: 14px;
+  margin: 10px 0;
+  background-color: #fff;
+  color: #054561;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.footer .contact a {
+  font-size: 14px;
+  color: #8CACBA;
+  text-decoration: none;
+}
+
+.footer .contact a:hover {
+  text-decoration: underline;
+}
+
+.footer .location p {
+  font-size: 14px;
+  color: #8CACBA;
+  line-height: 1.6;
+}
+
+.footer .pages h3, .footer .features h3, .footer .follows h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer .pages a, .footer .features a, .footer .follows a {
+  font-size: 14px;
+  font-weight: 200;
+  color: #8CACBA;
+  text-decoration: none;
+}
+
+.footer .pages a:hover, .footer .features a:hover, .footer .follows a:hover {
+  text-decoration: underline;
+}
+
+.footer .follows a i {
+  margin-right: 8px;
+}
+/* Media query for smaller devices */
+@media only screen and (max-width: 768px) {
+  .footer {
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    justify-content: center;
+  }
+
+  .footer div {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .footer p,
+  .footer li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer .contact a,
+  .footer .location p,
+  .footer .pages a,
+  .footer .features a,
+  .footer .follows a {
+    font-size: 14px;
+  }
+
+  .footer .contact p {
+    font-size: 16px;
+  }
+
+  .footer .pages ul,
+  .footer .features ul,
+  .footer .follows ul {
+    text-align: center;
+  }
+
+  .footer .pages li,
+  .footer .features li,
+  .footer .follows li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Additional styles for larger desktop screens */
+@media only screen and (min-width: 1200px) {
+  .footer {
+    padding: 50px 0;
+  }
+
+  .footer div {
+    max-width: 25%;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .footer .pages ul,
+  .footer .features ul,
+  .footer .follows ul {
+    text-align: left;
+  }
+
+  .footer .pages li,
+  .footer .features li,
+  .footer .follows li {
+    margin-bottom: 8px;
+  }
+}
+
+
+      </style>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
     </head>
     <body>
