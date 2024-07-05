@@ -1,4 +1,4 @@
-    
+            
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
 
@@ -7,7 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
 } 
@@ -104,13 +106,19 @@ ul li a {
   font-weight: 700;
 
 }
-  .fd{
+  .fa{
     border: 1px solid white;
     color: white;
     padding: 5px 20px 5px 20px;
     border-radius: 5px;
     background: linear-gradient(to right, #054A68 0%, #52829C 100%);
     margin-left: 20px;
+    cursor: pointer;
+  }
+  .fa:hover{
+    padding: 7px 25px 7px 25px;
+    font-size: 20px;
+    transition: 1s;
   }
       /* Media query for responsiveness */
       @media (max-width: 768px) {
@@ -196,6 +204,7 @@ ul li a {
     text-align: center;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 360px;
 }
 .vg{
   flex: 1 1 300px;
@@ -206,7 +215,7 @@ ul li a {
   text-align: center;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+  max-width: 360px;
   cursor: pointer;
 }
 
@@ -364,6 +373,13 @@ ul li a {
     .cs h1 {
         font-size: 22px;
     }
+    .as{
+        margin-left: 500px;
+        
+    }
+}
+@media only screen and (max-width: 600px) {
+
 }
 
 @media (max-width: 360px) {
@@ -373,9 +389,12 @@ ul li a {
     .cs h1 {
         font-size: 20px;
     }
+    .as{
+        margin-left: 500px;
+        
+    }
 }
-/* FOOTER LAYOUT */
-
+/* Default styles for larger screens */
 .footer {
   background: linear-gradient(to right, #043f59 100%, #4f86a4 0%);
   padding: 50px 0;
@@ -405,7 +424,7 @@ ul li a {
 }
 
 .footer .contact, .footer .location, .footer .pages, .footer .features, .footer .follows {
-  flex:none;
+  flex: none;
 }
 
 .footer .contact p, .footer .location p {
@@ -430,7 +449,7 @@ ul li a {
 .footer .follows a i {
   margin-right: 8px;
 }
-
+/* Additional styles for the copyright notice */
 .copyright {
   text-align: center;
   padding: 18px 0;
@@ -438,24 +457,19 @@ ul li a {
   color: #8CACBA;
 }
 
-.footer .contact {
-  text-align: left;
-  margin-top: 70px;
-}
-
+/* Additional styles for specific elements in the footer */
 .footer .contact h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
 .footer .contact p {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 14px;
   margin: 10px 0;
-  background-color: white;
-  color: #054561 ;
+  background-color: #fff;
+  color: #054561;
   padding: 10px 20px;
-  border-radius: 10px
+  border-radius: 10px;
 }
 
 .footer .contact a {
@@ -468,23 +482,14 @@ ul li a {
   text-decoration: underline;
 }
 
-.footer .location{
-  margin-top: 70px;
-}
-
 .footer .location p {
   font-size: 14px;
   color: #8CACBA;
   line-height: 1.6;
 }
 
-.footer .location p {
-  font-size: 14px;
-  color: #8CACBA;
-}
-
 .footer .pages h3, .footer .features h3, .footer .follows h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 15px;
 }
 
@@ -502,50 +507,79 @@ ul li a {
 .footer .follows a i {
   margin-right: 8px;
 }
+/* Media query for smaller devices */
 @media only screen and (max-width: 768px) {
   .footer {
-    flex-direction: column;
-    padding: 30px 15px;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    justify-content: center;
   }
 
   .footer div {
-    max-width: 100%; /* Adjust the width to fit full width on smaller screens */
-    margin-bottom: 30px; /* Add space between each section */
-  }
-
-  .footer .contact {
-    text-align: center; /* Center align contact information */
-    margin-top: 0; /* Remove top margin */
-  }
-
-  .footer .location {
-    margin-top: 0; /* Remove top margin */
-    text-align: center; /* Center align location information */
-  }
-
-  .footer .pages, .footer .features, .footer .follows {
-    text-align: center; /* Center align pages, features, and follows sections */
-  }
-
-  .footer .pages ul, .footer .features ul, .footer .follows ul {
-    text-align: left; /* Left align list items within sections */
-  }
-
-  .footer .pages li, .footer .features li, .footer .follows li {
-    margin-bottom: 10px; /* Space between list items */
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    margin-bottom: 30px;
   }
 
   .footer h3 {
-    font-size: 16px; /* Decrease heading font size */
-    margin-bottom: 15px; /* Adjust heading bottom margin */
+    font-size: 16px;
+    margin-bottom: 15px;
   }
 
-  .footer p, .footer li, .footer a {
-    font-size: 12px; /* Decrease paragraph and link font size */
+  .footer p,
+  .footer li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer .contact a,
+  .footer .location p,
+  .footer .pages a,
+  .footer .features a,
+  .footer .follows a {
+    font-size: 14px;
   }
 
   .footer .contact p {
-    font-size: 16px; /* Adjust contact paragraph font size */
-    padding: 10px; /* Increase padding for contact info */
+    font-size: 16px;
+  }
+
+  .footer .pages ul,
+  .footer .features ul,
+  .footer .follows ul {
+    text-align: center;
+  }
+
+  .footer .pages li,
+  .footer .features li,
+  .footer .follows li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Additional styles for larger desktop screens */
+@media only screen and (min-width: 1200px) {
+  .footer {
+    padding: 50px 0;
+  }
+
+  .footer div {
+    max-width: 25%;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .footer .pages ul,
+  .footer .features ul,
+  .footer .follows ul {
+    text-align: left;
+  }
+
+  .footer .pages li,
+  .footer .features li,
+  .footer .follows li {
+    margin-bottom: 8px;
   }
 }
